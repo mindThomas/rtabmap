@@ -207,6 +207,8 @@ ENDIF()
 set(RTABMAP_QT_VERSION AUTO CACHE STRING "Force a specific Qt version.")
 set_property(CACHE RTABMAP_QT_VERSION PROPERTY STRINGS AUTO 4 5)
 
+find_package(Boost REQUIRED COMPONENTS system signals python thread program_options regex timer QUIET)
+
 FIND_PACKAGE(OpenCV REQUIRED QUIET)
 
 IF(WITH_QT)
